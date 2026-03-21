@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  min-height: 100vh;
+}
+
+.container {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #1a202c;
+}
+
+.subtitle {
+  color: #718096;
+  margin-top: 4px;
+  margin-bottom: 32px;
+}
+
+.counter-box {
+  background: #ebf4ff;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.counter-box #count {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  display: block;
+}
+
+.counter-box p {
+  color: #4a5568;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary  { background: #3182ce; color: white; }
+.btn-secondary { background: #718096; color: white; }
+.btn-danger   { background: #e53e3e; color: white; }
+
+.history h2 {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#history-list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#history-list li {
+  font-size: 0.9rem;
+  color: #4a5568;
+  padding: 6px 10px;
+  background: #f7fafc;
+  border-radius: 6px;
+  border-left: 3px solid #bee3f8;
+}
+
+#history-list:empty::after {
+  content: "No actions yet.";
+  color: #a0aec0;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+}
